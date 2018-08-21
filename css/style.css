@@ -161,16 +161,41 @@ ul {
 
 }
 
+.back-wrap {
+	background: url(../img/backround_shape_slice.jpg);
+	background-repeat: repeat;
+	padding: 115px 0 115px 0;
+}
+
 .about_cattery {
-	padding: 160px 0 195px 0;
+	padding: 84px 0 114px 0;
 	margin: 0px auto;
 	width: 1024px;
-	background: url(../img/backround_shape.png);
-	background-repeat: no-repeat;
+
 } 
 
+.about_cattery::before {
+	content: "";
+	display: inline-block;
+	background-image: url(../img/backround_shape_up.png);
+	background-repeat: no-repeat;
+	height: 76px;
+	width: 1024px;
+	background-size: 100%;
+	margin-bottom: -4px;
+}
+
+.about_cattery::after {
+	content: "";
+	display: inline-block;
+	background: url(../img/backround_shape_dawn.png);
+	background-repeat: no-repeat;
+	height: 81px;
+	width: 1024px;
+	background-size: 100%;
+}
+
 .about_cattery_top {
-	margin-left: 365px;
 	margin: 0 0 78px 365px;
 }
 
@@ -191,7 +216,7 @@ ul {
 
 
 .cattery_h2 {
-	margin-bottom: 20px;
+	margin: 0px 0px 20px 0px;
 }
 
 .features-block {
@@ -210,6 +235,7 @@ ul {
 .dog_in_da_window {
 	border-radius: 10px;
 	box-shadow: -20px 0 80px -10px #000;
+	height: 275px;
 }
 
 .walk_video {
@@ -221,6 +247,7 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin: 40px 0px 0px -15px;
 }
 
 .childhood {
@@ -248,15 +275,16 @@ ul {
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
-.animal_bio:nth-child(2) {
+.animal_bio:nth-child(2n) {
 	margin-left: 20px;
 }
 
-.animal_bio:nth-child(4) {
+/*.animal_bio:nth-child(4) {
 	margin-left: 20px;
-}
+}*/
 
 .animal_bio {
 	width: 460px;
@@ -380,6 +408,16 @@ ul {
 	box-shadow: 0px 6px 40px 0px rgba(0, 0, 0, 0.4);
 }
 
+.card:hover {
+	background-color: #fff;
+	margin: 110px 20px 100px 0;
+	width: 220px;
+	border-radius: 10px;
+	/*overflow: hidden;*/
+	box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.4);
+}
+
+
 .info-pages_img {
 	border-radius: 10px 10px 0 0;
 
@@ -430,7 +468,15 @@ ul {
 	color: #510fad;
 	font-weight: 600;
 	letter-spacing: normal;
+	display: flex;	
+	align-items: 	center;	
 }
+/*.clause:hover {
+	color: #f00;
+}
+.clause:hover .icon-arrow_next_purple {
+	background-position: 10px -78px; //пропиши правильные координаты
+}*/
 
 .card-text {
 	color: #000;
@@ -438,20 +484,20 @@ ul {
 }
 
 .card-content_inner {
-	width: 135px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .contacts_info {
 	width: 940px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 footer {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;	
+	margin-bottom: 70px;
 }
 
 .footer_contacts {
@@ -475,8 +521,15 @@ footer {
     margin-left: 40px;
 }
 
+.footer_nav_list_item a{
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 30px;
+	color: #737274;
+}
+
 .footer_social {
-	margin-left: 405px;
+    margin-right: 35px;
 }
 
 .footer_gray_text {
@@ -496,6 +549,11 @@ footer {
 	text-decoration: none;
 }
 
+
+.line {
+	width: 940px;
+}
+
 .icon-arrow_next_hover {
   background-image: url(../img/sprite.png);
   background-position: -40px -78px;
@@ -504,6 +562,15 @@ footer {
   display: inline-block;
 }
 .icon-arrow_next_purple {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -78px;
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+}
+
+.icon-arrow_next_purple_card {
+  margin-left: 10px;
   background-image: url(../img/sprite.png);
   background-position: 0px -78px;
   width: 20px;
@@ -525,15 +592,7 @@ footer {
   display: inline-block;
   margin-right: 5px;
 }
-.icon-facebook_icon_purple_hover {
-  background-image: url(../img/sprite.png);
-  background-position: -52px 0px;
-  width: 26px;
-  height: 26px;
-  display: inline-block;
-  margin-right: 5px;
-}
-.icon-facebook_icon_yellow_hover {
+.icon-facebook_icon:hover {
   background-image: url(../img/sprite.png);
   background-position: -52px -26px;
   width: 26px;
@@ -549,17 +608,9 @@ footer {
   display: inline-block;
   margin-right: 5px;
 }
-.icon-footer_insta_icon {
+.icon-footer_fb_icon:hover {
   background-image: url(../img/sprite.png);
-  background-position: 0px 0px;
-  width: 26px;
-  height: 26px;
-  display: inline-block;
-  margin-right: 5px;
-}
-.icon-footer_vk_icon {
-  background-image: url(../img/sprite.png);
-  background-position: -52px -52px;
+  background-position: -52px 0px;
   width: 26px;
   height: 26px;
   display: inline-block;
@@ -573,17 +624,25 @@ footer {
   display: inline-block;
   margin-right: 5px;
 }
-.icon-instagram_icon_purple_hover {
+.icon-instagram_icon:hover {
   background-image: url(../img/sprite.png);
-  background-position: -78px -26px;
+  background-position: -78px -52px;
   width: 26px;
   height: 26px;
   display: inline-block;
   margin-right: 5px;
 }
-.icon-instagram_icon_yellow_hower {
+.icon-footer_insta_icon {
   background-image: url(../img/sprite.png);
-  background-position: -78px -52px;
+  background-position: 0px 0px;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.icon-footer_insta_icon:hover {
+  background-image: url(../img/sprite.png);
+  background-position: -78px -26px;
   width: 26px;
   height: 26px;
   display: inline-block;
@@ -597,17 +656,25 @@ footer {
   display: inline-block;
   margin-right: 5px;
 }
-.icon-vk_icon_purple_hover {
+.icon-vk_icon:hover {
   background-image: url(../img/sprite.png);
-  background-position: 0px -26px;
+  background-position: -26px 0px;
   width: 26px;
   height: 26px;
   display: inline-block;
   margin-right: 5px;
 }
-.icon-vk_icon_yellow_hover {
+.icon-footer_vk_icon {
   background-image: url(../img/sprite.png);
-  background-position: -26px 0px;
+  background-position: -52px -52px;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.icon-footer_vk_icon:hover {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -26px;
   width: 26px;
   height: 26px;
   display: inline-block;

@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>pets-malyshev</title>
-	<link rel="stylesheet" href="style/normalize.css">
-	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans&amp;subset=cyrillic" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
 </head>
@@ -39,8 +39,10 @@
 			<p class="slogan under-title"><span class="ver-line">|</span> Животные как дети — им нужны мы.</p>
 	
 			</div>
+				<!-- <div class="bgs_up"></div> -->
 			<section class="about_cattery">
-				<div class="about_cattery_top">	
+				<div class="back-wrap">
+					<div class="about_cattery_top">	
 					<h2 class="cattery_h2" id="cattery">О питомнике</h2>
 					<p class="cattery-slogan">Наш питомник — не просто дом для животных,
 					а семья из разных пород собак и кошек</p>
@@ -60,7 +62,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
 			</section>
+			<!-- <div class="bgs_dawn"></div> -->
 			<div class="animals">
 				<div class="container">
 					<h2 id="animals_nav" class="animals_top">Наши породы</h2>
@@ -161,8 +165,8 @@
 							<div class="card-content">
 								<p class="card-text">Правильный рацион для взрослого пса</p>
 								<div class="card-content_inner">
-								<a class="clause" href="#">Читать статью</a>
-								<a href="#" class="icon-arrow_next_purple"></a>
+								<a class="clause" href="#">Читать статью <i href="#" class="icon-arrow_next_purple_card"></i></a>
+								
 								</div>
 							
 							</div>
@@ -173,7 +177,7 @@
 								<p class="card-text">Бывает ли собачья депрессия</p>
 								<div class="card-content_inner">
 									<a class="clause" href="#">Читать статью</a>
-								<a href="#" class="icon-arrow_next_purple"></a>
+								<a href="#" class="icon-arrow_next_purple_card"></a>
 								</div>
 							</div>
 					</div>
@@ -199,21 +203,23 @@
 					</div>
 			</div>
 		</main>
-		<hr color="#d5d1ca">
+		<hr class="line" color="#d5d1ca">
 		<footer>
+				<div class="row">	
 			<nav class="footer_nav">
 				<ul class="footer_nav_list">
-					<li><a href="#cattery">О питомнике</a></li>
-					<li><a href="#animals_nav">Животные</a>
+					<li class="footer_nav_list_item"><a href="#cattery">О питомнике</a></li>
+					<li class="footer_nav_list_item"><a href="#animals_nav">Животные</a>
 					</li>
-					<li><a href="#feedback">Отзывы</a>
+					<li class="footer_nav_list_item"><a href="#feedback">Отзывы</a>
 					</li>
-					<li><a href="#blog">Блог</a>
+					<li class="footer_nav_list_item"><a href="#blog">Блог</a>
 					</li>
-					<li><a href="#contacts">Контакты</a>
+					<li class="footer_nav_list_item"><a href="#contacts">Контакты</a>
 					</li>
 				</ul>
 			</nav>
+				</div>
 			<div class="footer_social">
 				<a href="https://vk.com/epixx_pets" class="icon-footer_vk_icon"></a>
 				<a href="#" class="icon-footer_fb_icon"></a>
